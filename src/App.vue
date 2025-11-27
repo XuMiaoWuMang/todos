@@ -5,12 +5,8 @@ import TodoFooter from './components/TodoFooter.vue';
 export default {
   data() {
     return {
-      //测试数据
-      todos: [
-        { id: 1, txt: '任务1', completed: false },
-        { id: 2, txt: '任务2', completed: true },
-        { id: 3, txt: '任务3', completed: false },
-      ],
+      //数据
+      todos: JSON.parse(localStorage.getItem('vue-todos') || '[]'),
       tabType: 0 //默认为显示全部任务
     }
   }, components: {
